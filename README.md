@@ -5,7 +5,7 @@ Online Version:
 https://182exe.github.io/matrix
 
 Offline Download:
-
+Download Repository as ZIP, then open 'matrix.html'
 
 Disclaimer:
 - Please do not use this code or website for malicious purposes. This is only meant to be used as a joke, and users should be warned before subjected to this content.
