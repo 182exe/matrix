@@ -143,6 +143,7 @@
       var randomNumber = getRandomInt(0,9);
       function redPill() {
         if (confirm("Are you sure?")) {
+          window.alert("Please allow popups on this website to play the game!")
           window.addEventListener('keydown', (e) => {
             console.log(e)
           })
@@ -172,6 +173,7 @@
         }
       }
       function bluePill() {
+        window.alert("Please allow popups on this website to play the game!")
         if (confirm("Are you sure?")) {
           for (let i=0; i<5; i++) {
             var smallWindow = window.open(url, "", "width=1920,height=1080");
