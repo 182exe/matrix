@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Matrix</title>
-    <style>
+<style>
       body {
         background: black;
       }
@@ -17,7 +17,7 @@
         display: block;
         margin-right: auto;
         margin-left: auto;
-        transition: 0.5s ease;
+        transition: 0.3s ease-in-out;
         border-radius: 20px;
         font-size: 20px;
       }
@@ -31,7 +31,7 @@
         margin-right: auto;
         border: 3px solid blue;
         margin-left: auto;
-        transition: 0.5s ease;
+        transition: 0.3s ease-in-out;
         border-radius: 20px;
         font-size: 20px;
       }
@@ -39,7 +39,7 @@
         background: black;
         font-family: monospace;
         color: red;
-        width: 20%;
+        width: 15%;
         border: 3px solid red;
         padding: 10px;
         transition: 0.5s ease;
@@ -47,12 +47,13 @@
         box-shadow: 0px 0px 6px red;
         border-radius: 20px;
         animation: fly 1s;
+        transition: 0.3s ease-in-out;
       }
       .buttonblue:hover {
         background: black;
         font-family: monospace;
         color: blue;
-        width: 20%;
+        width: 15%;
         border: 3px solid blue;
         padding: 10px;
         transition: 0.5s ease;
@@ -60,6 +61,7 @@
         box-shadow: 0px 0px 6px blue;
         border-radius: 20px;
         animation: fly 1s;
+        transition: 0.3s ease-in-out;
       }
       .text {
         color: white;
@@ -79,25 +81,25 @@
       }
       .text:hover {
         letter-spacing: 15px;
-        animation: fly 1s;
+        animation: down 1s;
         transition: 0.5s ease;
       }
       .text2:hover {
         letter-spacing: 10px;
-        animation: fly 1s;
+        animation: down 1s;
         transition: 0.5s ease;
       }
       @keyframes fly {
         0% { transform: translate(0px,0px) rotate(0deg); }
-        25% { transform: translate(0px,0px) rotate(2deg); }
-        50% { transform: translate(0px,0px) rotate(-2deg); }
+        25% { transform: translate(1px,0px) rotate(0deg); }
+        50% { transform: translate(-1px,0px) rotate(0deg); }
         75% { transform: translate(0px 0px) rotate(0deg); }
         100% { transform: translate(0px,0px) rotate(0deg); }
       }
       @keyframes down {
         0% { transform: translate(0px,0px) rotate(0deg); }
-        25% { transform: translate(0px,0px) rotate(0deg); }
-        50% { transform: translate(0px,0px) rotate(0deg); }
+        25% { transform: translate(0px,0.5px) rotate(0deg); }
+        50% { transform: translate(0px,-0.5px) rotate(0deg); }
         75% { transform: translate(0px 0px) rotate(0deg); }
         100% { transform: translate(0px,0px) rotate(0deg); }
       }
