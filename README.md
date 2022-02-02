@@ -1,5 +1,5 @@
 # Matrix
-**Chrome OS tab spammer website/software. Can crash Chromebooks if Chrome setting 'allow popups' is enabled. Downloadable versions available.**
+**Chrome OS tab spammer website/software. Can crash Chromebooks if Chrome setting 'allow popups' is enabled. Disguised as a game with downloadable versions available.**
 
 You can use the website, or the downloadable files below to use this repository.
 > - [Click here to go to the online website version](https://182exe.github.io/matrix)
