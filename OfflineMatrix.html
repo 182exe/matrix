@@ -16,12 +16,12 @@
       .buttonred {
         background: #C21D44;
         font-family: 'Astloch', sans-serif;
-        width: 10%;
+        width: 13%;
         padding-top: 5px;
         padding-bottom: 5px;
         margin-left: auto;
         margin-right: auto;
-        color: #182225;
+        color: #C21D44;
         border: 3px solid #C21D44;
         display: block;
         align-items: center;
@@ -32,12 +32,12 @@
       .buttonblue {
         background: #256498;
         font-family: 'Astloch', sans-serif;
-        width: 10%;
+        width: 13%;
         padding-top: 5px;
         padding-bottom: 5px;
         margin-left: auto;
         margin-right: auto;
-        color: #182225;
+        color: #256498;
         border: 3px solid #256498;
         display: block;
         align-items: center;
@@ -87,15 +87,13 @@
         100% { transform: translate(0px,0px) rotate(0deg); }
       }
     </style>
-  </head>
-  <body>
-  <div>
-  <h1 class="text">Matrix.</h1>
-  <button class="buttonred" onclick="javascript:redPill()">Red</button>
-  <br>
-  <button class="buttonblue" onclick="javascript:bluePill()">Blue</button>
-  <h2 class="text2">Choose a button.</h2>
-  </div>
+    <div>
+    <h1 class="text">Matrix.</h1>
+    <button class="buttonred" onclick="javascript:redPill()">|</button>
+    <br>
+    <button class="buttonblue" onclick="javascript:bluePill()">|</button>
+    <h2 class="text2">Choose a button.</h2>
+    </div>
     <script>
     var url = window.location.pathname;
       function getRandomInt(min, max) {
