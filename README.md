@@ -8,3 +8,5 @@ You can use the website, or the downloadable files below to use this repository.
 > Next, unzip what you downloaded, and open OfflineMatrix.html. This is the offline version of the website. 666.html is a quick version of the spammer that will immediately start opening tabs.
 
 *Disclaimer: Please do not use this code or website for malicious purposes. This is only meant to be used as a joke, and users should be warned before subjected to this content.*
+
+Special thanks to https://github.com/navaneethkm004 for some code from his amazing browser jammer.
