@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="Matrix"/>
     <meta name="og:title" content="Matrix"/>
-    <meta name="og:description" content="Red or Blue?"/>
+    <meta name="og:description" content="Red or blue? Or green?"/>
     <meta name="og:type" content="website"/>
     <meta name="og:url" content="https://182exe.github.io/matrix"/>
     <meta name="og:image" content="https://raw.githubusercontent.com/google/material-design-icons/master/png/social/sentiment_very_dissatisfied/materialiconstwotone/24dp/1x/twotone_sentiment_very_dissatisfied_black_24dp.png"/>
@@ -53,11 +53,31 @@
         border-radius: 20px;
         font-size: 20px;
       }
+      .buttongreen {
+        background: #66c21d;
+        font-family: 'Astloch', sans-serif;
+        width: 13%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #66c21d;
+        border: 3px solid #66c21d;
+        display: block;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+        border-radius: 20px;
+        font-size: 20px;
+      }
       .buttonred:hover {
         animation: fly 1s;
         transition: 0.3s ease-in-out;
       }
       .buttonblue:hover {
+        animation: fly 1s;
+        transition: 0.3s ease-in-out;
+      }
+      .buttongreen:hover {
         animation: fly 1s;
         transition: 0.3s ease-in-out;
       }
@@ -106,6 +126,8 @@
     <button class="buttonred" onclick="javascript:redPill()">|</button>
     <br>
     <button class="buttonblue" onclick="javascript:bluePill()">|</button>
+    <br>
+    <button class="buttongreen" onclick="javascript:greenPill()">|</button>
     <h2 class="text2">Choose a button.</h2>
     </div>
     <script>
