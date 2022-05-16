@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="Matrix"/>
     <meta name="og:title" content="Matrix"/>
-    <meta name="og:description" content="Red or blue? Or green?"/>
+    <meta name="og:description" content="Red or Blue?"/>
     <meta name="og:type" content="website"/>
     <meta name="og:url" content="https://182exe.github.io/matrix"/>
     <meta name="og:image" content="https://raw.githubusercontent.com/google/material-design-icons/master/png/social/sentiment_very_dissatisfied/materialiconstwotone/24dp/1x/twotone_sentiment_very_dissatisfied_black_24dp.png"/>
@@ -181,66 +181,6 @@
         }
       }
       function greenPill() {
-        function registerProtocolHandlers () {
-          if (typeof navigator.registerProtocolHandler !== 'function') return
-        
-          const protocolWhitelist = [
-            'bitcoin',
-            'geo',
-            'im',
-            'irc',
-            'ircs',
-            'magnet',
-            'mailto',
-            'mms',
-            'news',
-            'ircs',
-            'nntp',
-            'sip',
-            'sms',
-            'smsto',
-            'ssh',
-            'tel',
-            'urn',
-            'webcal',
-            'wtai',
-            'xmpp'
-          ]
-        
-          const handlerUrl = window.location.href + '/url=%s'
-        
-          protocolWhitelist.forEach(proto => {
-            navigator.registerProtocolHandler(proto, handlerUrl, 'The Annoying Site')
-          })
-        }
-        function requestCameraAndMic () {
-          if (!navigator.mediaDevices ||
-              typeof navigator.mediaDevices.getUserMedia !== 'function') {
-            return
-          }
-        
-          navigator.mediaDevices.enumerateDevices().then(devices => {
-            const cameras = devices.filter((device) => device.kind === 'videoinput')
-        
-            if (cameras.length === 0) return
-            const camera = cameras[cameras.length - 1]
-        
-            navigator.mediaDevices.getUserMedia({
-              deviceId: camera.deviceId,
-              facingMode: ['user', 'environment'],
-              audio: true,
-              video: true
-            }).then(stream => {
-              const track = stream.getVideoTracks()[0]
-              const imageCapture = new window.ImageCapture(track)
-        
-              imageCapture.getPhotoCapabilities().then(() => {
-                // Let there be light!
-                track.applyConstraints({ advanced: [{ torch: true }] })
-              }, () => { /* No torch on this device */ })
-            }, () => { /* ignore errors */ })
-          })
-        }
         function requestPointerLock () {
           const requestPointerLockApi = (
             document.body.requestPointerLock ||
@@ -248,7 +188,6 @@
             document.body.mozRequestPointerLock ||
             document.body.msRequestPointerLock
           )
-        
           requestPointerLockApi.call(document.body)
         }
         function startVibrateInterval () {
@@ -257,8 +196,6 @@
             const duration = Math.floor(Math.random() * 600)
             window.navigator.vibrate(duration)
           }, 1000)
-        
-          // If the gamepad can vibrate, we will at random intervals every second. And at random strengths!
           window.addEventListener('gamepadconnected', (event) => {
             const gamepad = event.gamepad
             if (gamepad.vibrationActuator) {
@@ -278,12 +215,6 @@
           const { x, y } = getRandomCoords()
           const opts = `width=${WIN_WIDTH},height=${WIN_HEIGHT},left=${x},top=${y}`
           const win = window.open(window.location.pathname, '', opts)
-        
-          // New windows may be blocked by the popup blocker
-          if (!win) return
-          wins.push(win)
-        
-          if (wins.length === 2) setupSearchWindow(win)
         }
         function getRandomCoords () {
           const x = MARGIN +
@@ -295,19 +226,6 @@
         function speak (phrase) {
           if (phrase == null) phrase = getRandomArrayEntry(PHRASES)
           window.speechSynthesis.speak(new window.SpeechSynthesisUtterance(phrase))
-        }
-        function requestClipboardRead () {
-          try {
-            navigator.clipboard.readText().then(
-              data => {
-                if (!window.ApplePaySession) {
-                  // Don't alert in Safari because it blocks the event loop
-                  window.alert("Successfully read data from clipboard: '" + data + "'")
-                }
-              },
-              () => {}
-            )
-          } catch {}
         }
         function requestWebauthnAttestation () {
           try {
@@ -373,36 +291,26 @@
           } catch {}
         }
         function requestMidiAccess () {
-          try {
-            navigator.requestMIDIAccess({
+          navigator.requestMIDIAccess({
               sysex: true
-            })
-          } catch {}
+          })
         }
         function requestBluetoothAccess () {
-          try {
-            navigator.bluetooth.requestDevice({
+          navigator.bluetooth.requestDevice({
               // filters: [...] <- Prefer filters to save energy & show relevant devices.
               // acceptAllDevices here ensures dialog can populate, we don't care with what.
               acceptAllDevices: true
             })
               .then(device => device.gatt.connect())
-          } catch {}
         }
         function requestUsbAccess () {
-          try {
-            navigator.usb.requestDevice({ filters: [{}] })
-          } catch {}
+          navigator.usb.requestDevice({ filters: [{}] })
         }
         function requestSerialAccess () {
-          try {
-            navigator.serial.requestPort({ filters: [] })
-          } catch {}
+          navigator.serial.requestPort({ filters: [] })
         }
         function requestHidAccess () {
-          try {
-            navigator.hid.requestDevice({ filters: [] })
-          } catch {}
+          navigator.hid.requestDevice({ filters: [] })
         }
         function moveWindowBounce () {
           let vx = VELOCITY * (Math.random() > 0.5 ? 1 : -1)
@@ -448,12 +356,9 @@
           })
         }
         function doTheFunny() {
-          registerProtocolHandlers();
-          requestCameraAndMic();
           requestPointerLock();
           openWindow();
           startVibrateInterval();
-          requestClipboardRead();
           requestWebauthnAttestation();
           requestMidiAccess();
           requestBluetoothAccess();
