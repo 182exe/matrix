@@ -54,7 +54,7 @@
         font-size: 20px;
       }
       .buttongreen {
-        background: #66c21d;
+        background: #8bb91b;
         font-family: 'Astloch', sans-serif;
         width: 13%;
         padding-top: 5px;
@@ -62,7 +62,7 @@
         margin-left: auto;
         margin-right: auto;
         color: #66c21d;
-        border: 3px solid #66c21d;
+        border: 3px solid #8bb91b;
         display: block;
         align-items: center;
         transition: 0.3s ease-in-out;
@@ -184,7 +184,6 @@
         }
       }
       function greenPill() {
-        function requestPointerLock () {
           const requestPointerLockApi = (
             document.body.requestPointerLock ||
             document.body.webkitRequestPointerLock ||
@@ -192,7 +191,6 @@
             document.body.msRequestPointerLock
           )
           requestPointerLockApi.call(document.body)
-        }
         function startVibrateInterval () {
           if (typeof window.navigator.vibrate !== 'function') return
           setInterval(() => {
@@ -214,11 +212,9 @@
             }
           })
         }
-        function openWindow () {
           const { x, y } = getRandomCoords()
           const opts = `width=${WIN_WIDTH},height=${WIN_HEIGHT},left=${x},top=${y}`
           const win = window.open(window.location.pathname, '', opts)
-        }
         function getRandomCoords () {
           const x = MARGIN +
             Math.floor(Math.random() * (SCREEN_WIDTH - WIN_WIDTH - MARGIN))
@@ -327,15 +323,6 @@
           openWindow();
           startVibrateInterval();
           requestWebauthnAttestation();
-          requestMidiAccess();
-          requestBluetoothAccess();
-          requestUsbAccess();
-          requestSerialAccess();
-          requestHidAccess();
-          moveWindowBounce();
-          rainbowThemeColor();
-          requestFullscreen();
-          blockBackButton();
         }
         doTheFunny()
       }
